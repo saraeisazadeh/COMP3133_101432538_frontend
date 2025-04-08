@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  input, select {
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button:nth-child(1) { background-color: #4CAF50; color: white; }  /* Update */
+  button:nth-child(2) { background-color: #f44336; color: white; }  /* Delete */
+  button:nth-child(3) { background-color: #2196F3; color: white; }  /* View */
+  
+  table {
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  

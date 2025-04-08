@@ -1,0 +1,53 @@
+<h2 style="margin-bottom: 20px;">Add New Employee</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" style="max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+  <input type="text" placeholder="First Name" formControlName="first_name" />
+  <div *ngIf="form.get('first_name')?.invalid && form.get('first_name')?.touched" style="color: red; margin-bottom: 10px;">
+    First name is required
+  </div>
+
+  <input type="text" placeholder="Last Name" formControlName="last_name" />
+  <div *ngIf="form.get('last_name')?.invalid && form.get('last_name')?.touched" style="color: red; margin-bottom: 10px;">
+    Last name is required
+  </div>
+
+  <input type="email" placeholder="Email" formControlName="email" />
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" style="color: red; margin-bottom: 10px;">
+    Valid email is required
+  </div>
+
+  <input type="text" placeholder="Department" formControlName="department" />
+  <div *ngIf="form.get('department')?.invalid && form.get('department')?.touched" style="color: red; margin-bottom: 10px;">
+    Department is required
+  </div>
+
+  <input type="text" placeholder="Position" formControlName="position" />
+  <div *ngIf="form.get('position')?.invalid && form.get('position')?.touched" style="color: red; margin-bottom: 10px;">
+    Position is required
+  </div>
+
+  <input type="date" formControlName="date_of_joining" />
+  <div *ngIf="form.get('date_of_joining')?.invalid && form.get('date_of_joining')?.touched" style="color: red; margin-bottom: 10px;">
+    Date of joining is required
+  </div>
+
+  <select formControlName="gender">
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <div *ngIf="form.get('gender')?.invalid && form.get('gender')?.touched" style="color: red; margin-bottom: 10px;">
+    Gender is required
+  </div>
+
+  <input type="number" placeholder="Salary" formControlName="salary" />
+  <div *ngIf="form.get('salary')?.invalid && form.get('salary')?.touched" style="color: red; margin-bottom: 10px;">
+    Salary is required
+  </div>
+
+  <label style="display: block; margin-top: 10px;">Profile Picture:</label>
+  <input type="file" (change)="onFileChange($event)" /><br />
+
+  <button type="submit" [disabled]="form.invalid" style="margin-top: 15px;">Add Employee</button>
+</form>
