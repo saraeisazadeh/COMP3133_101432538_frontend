@@ -18,7 +18,7 @@ bootstrapApplication(AppComponent, {
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: 'http://localhost:4000/graphql' // ✅ change if needed
+            uri: 'https://comp3133-101432538-backend.onrender.com' // ✅ change if needed
           })
         };
       }
